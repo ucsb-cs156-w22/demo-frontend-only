@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# About the `frontend` directory.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Directory structures
+
+| folder                   | explanation                                      |
+|--------------------------|--------------------------------------------------|
+| `.storybook/`            | configuration files related to Storybook         |
+| `src/`                   | JavaScript source files                          |
+| `src/fixtures/`          | Sample data for storybook and testing            |
+| `src/main`               | Main application code                            |
+| `src/main/components`    | - Reusable React Components, parts of a page     |
+| `src/main/layouts`       | - Layouts for web pages                          |
+| `src/main/pages`         | - React Components for top level pages           |
+| `src/main/utils`         | - Plain old JS code (not react)                  |
+| `src/stories/`           | Storybook stories                                |
+| `src/stories/components` | - Storybook stories for components               |
+| `src/stories/layouts`    | - Storybook stories for layouts                  |
+| `src/stories/pages`      | - Storybook stories for pages                    |
+| `src/tests`              | Tests                                            |
+| `src/tests/components`   | - Tests for components                           |
+| `src/tests/pages`        | - Tests for pages                                |
+| `src/tests/utils`        | - Tests for utils                                |
+| `App.js`                 | Top level routing of pages                       |
+| `index.css`              | Main CSS file for application                    |
+| `index.js`               | Main file for applicaiton, context for `<App />` |
+| `reportWebVitals.js`     |                                                  |
+| `setupTests.js`          | setup for jest testing                           |
+| `.babelrc`               | Setup for Babel (transpiler for ES6 -> JS)       |
+| `.env-cmdrc.json`        |                                                  |
+| `.eslintignore`          | What issues will be ignored by ESLint            |
+| `.gitignore`             | Specific Node/JS/React files to ignore           |
+| `jsconfig.json`          | Configuration of directory structure             |
+| `package-lock.json`      | Versions of node dependencies                    |
+| `package.json`           | Specfication/Configuration of node project       |
+| `README.md`              | This file (documentation)                        |
+| `stryker.conf.json`      | Configuration of Stryker mutation testing        |
+
 
 ## Available Scripts
 
@@ -29,42 +66,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
