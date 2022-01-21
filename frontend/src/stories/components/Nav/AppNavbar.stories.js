@@ -17,10 +17,7 @@ const Template = (args) => {
 
 export const noRole = Template.bind({});
 
-export const admin = Template.bind({});
-admin.args = {
-    role: "admin"
-};
+
 
 
 

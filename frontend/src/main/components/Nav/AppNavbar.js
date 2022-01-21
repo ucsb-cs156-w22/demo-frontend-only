@@ -1,60 +1,25 @@
-import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { hasRole} from "main/utils/currentUser";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-export default function AppNavbar({currentUser, systemInfo, doLogout}) { 
-  console.log("systemInfo",systemInfo);
+export default function AppNavbar() {
   return (
     <Navbar expand="xl" variant="dark" bg="dark" sticky="top">
       <Container>
-        <Navbar.Brand as={Link} to="/">
-          Example
-        </Navbar.Brand>
-
-        <Navbar.Toggle />
-
-        <Navbar.Collapse className="justify-content-between">
-          <Nav className="mr-auto">
-            {
-              hasRole(currentUser,"ROLE_ADMIN") && (
-                <NavDropdown title="Admin" id="appnavbar-admin-dropdown" data-testid="appnavbar-admin-dropdown" >
-                  <NavDropdown.Item href="/admin/users">Users</NavDropdown.Item>
-                </NavDropdown>
-              )
-            }
-          </Nav>
-
+        <Navbar.Brand href="#home">Demo Frontend Only</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {
-              systemInfo?.springH2ConsoleEnabled && (
-                <>
-                   <Nav.Link href="/h2-console">H2Console</Nav.Link>
-                </>
-              ) 
-            }
-            {
-              systemInfo && systemInfo?.showSwaggerUILink && (
-                <>
-                   <Nav.Link href="/swagger-ui/index.html">Swagger</Nav.Link>
-                </>
-              ) 
-            }
-          </Nav>
-
-          <Nav className="ml-auto">
-            {
-              currentUser && currentUser.loggedIn ? (
-                <>
-                  <Navbar.Text className="me-3" as={Link} to="/profile">Welcome, {currentUser.root.user.email}</Navbar.Text>
-                  <Button onClick={doLogout}>Log Out</Button>
-                </>
-              ) : (
-                <Button href="/oauth2/authorization/google">Log In</Button>
-              )
-            }
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/action/one">Action</NavDropdown.Item>
+              <NavDropdown.Item href="/action/two">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="/action/three">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/action/four">Separated link</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-      </Container >
+      </Container>
     </Navbar >
   );
 }

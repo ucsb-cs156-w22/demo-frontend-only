@@ -3,6 +3,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
+## Commands
+
+| Command           | What it does                                       |
+|-------------------|----------------------------------------------------|
+| `npm install`     | Run first time, and anytime `package.json` changes |
+| `npm start`       | Start application on `http://localhost:3000`       |
+| `npm test`        | Run tests                                          |
+| `npm run build`   | Build production ready app in `build` folder       |
+| `npx stryker run` | Run Mutation testing                               |
+
+There is more information on some of these later in the README file.
+
 ## Directory structures
 
 | folder                   | explanation                                      |
@@ -39,7 +51,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 | `stryker.conf.json`      | Configuration of Stryker mutation testing        |
 
 
-## Available Scripts
+## More information on various commands
 
 In the project directory, you can run:
 
