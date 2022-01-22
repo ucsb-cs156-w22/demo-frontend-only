@@ -11,7 +11,7 @@
     "history": "^5.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.0-alpha.0",
-    "react-bootstrap-table-next": "^1.1.0",
+    "react-bootstrap-table-next": "^1.1.0", // NO
     "react-dom": "^17.0.1",
     "react-json-view": "^1.21.3",
     "react-query": "^3.12.2",
@@ -33,7 +33,7 @@
     "axios-mock-adapter": "^1.19.0",
     "env-cmd": "^10.1.0",
     "jest-mock-console": "^1.1.0",
-    "nock": "^13.0.11",
+    "nock": "^13.0.11", NO
     "react-test-renderer": "^17.0.2"
   },
   "scripts": {
